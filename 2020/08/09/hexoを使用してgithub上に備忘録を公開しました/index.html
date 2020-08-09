@@ -62,10 +62,18 @@
       
         <p>お勉強の備忘録をどこかに残しておきたいと考えていたところ<br>github pagesというgithub上に静的サイトを公開できる機能があることを知りました。</p>
 <p>ただのhtmlファイルでは外見が寂しいものの、CSSへの理解は薄かったため<br><strong><a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a></strong><br>というmarkdownで記事を作成できるサイトジェネレータを使用し、github上にサイトを公開。<br>しかし情報が古かったり環境が異なったりで中々上手くいきませんでした・・</p>
-<p>github上にデプロイしたサイトではなぜかCSSが反映されておらず<br>(chromeデベロッパーツールで確認したところ、参照先が空になっている)<br>ハマりかけたものの、<br>hexoの設定ファイル(_config.yml)内の記述を修正し、CSSの参照先を正しくすることで解決。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line">url: https://eiiche.github.io/eiiche/</span><br><span class="line"><span class="comment">##以下の部分を</span></span><br><span class="line">root: /eiiche/</span><br><span class="line"></span><br><span class="line">~~省略</span><br></pre></td></tr></table></figure>
+<p>github上にデプロイしたサイトではなぜかCSSが反映されておらず<br>(chromeデベロッパーツールで確認したところ、参照先が空になっている)<br>ハマりかけたものの</p>
+<ul>
+<li>hexoの設定ファイル(_config.yml)内の記述を修正<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line">url: https://eiiche.github.io/eiiche/</span><br><span class="line"><span class="comment">##以下の部分を</span></span><br><span class="line">root: /eiiche/</span><br><span class="line"></span><br><span class="line">~~省略</span><br></pre></td></tr></table></figure></li>
+<li>再度デプロイ<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
+<p>によって、CSSの参照先を正しくすることで解決。</p>
+<p>新しく記事を作成する場合は以下<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;記事タイトル&quot;</span><br></pre></td></tr></table></figure></p>
 <p>markdownに触れるのは初ですが、ブラウザ上でmarkdownが編集可能なサービス<br><a target="_blank" rel="noopener" href="https://stackedit.io/">stackedit</a><br>を使用して記録中</p>
+<p>ここまでで大分時間を消費した</p>
+<p><img src="https://i.imgur.com/0qKLKrY.png" alt="つかれたかお"></p>
 
       
     </div>
